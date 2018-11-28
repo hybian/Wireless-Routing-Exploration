@@ -35,7 +35,7 @@ There are two methods of getting started with Contiki:
           Tentative link-local IPv6 address fe80:0000:0000:0000:0302:0304:0506:0708
           Hello, world
       4. Ctrl+C to quit.
-  9. <b>Compiling and running for <platform></b> (we're using a Tmote Sky):
+  9. <b>Compiling and running for \<platform\></b> (we're using a Tmote Sky):
       1. Make sure your device is connected to the virtual machine or the following steps may fail (i.e. try running 
       `lsusb` to check if your device is connected)
       2. `sudo make TARGET=<platform> savetarget` (saves target compilation for future to save time. Optional. Replace
@@ -51,7 +51,22 @@ There are two methods of getting started with Contiki:
             Hello, world
       5. Ctrl+C to quit.
 - Manual Contiki (Recommended)
-  1. Coming soon.
+  1. Download Ubuntu (This guide uses Ubuntu Desktop 18.04.1)
+  2. Install onto a VM client (This guide uses VMware Workstation)
+  3. Power on VM and open terminal.
+  4. You'll need to following libraries:
+      - `sudo apt-get update`
+      - If you're just working with Tmote Sky: `sudo apt-get install build-essential git binutils-msp430 gcc-msp430 
+        msp430-libc msp430mcu mspdebug`
+      - If you're working with the OpenMote add "gcc-arm-none-eabi gdb-arm-none-eabi" to the end of the previous code 
+        block.
+      - A Java runtime environment: `sudo apt-get install openjdk-8-jdk openjdk-8-jre ant libncurses5-dev`
+      - Contiki OS is a 32-bit environment so in case you're running a 64-bit Linux OS (which Instant Contiki is as of 
+        this writing): `sudo apt-get install lib32ncurses5`.
+  5. Clone the Contiki OS source code:
+     - While in your folder of choice (this guide clones from home folder), run: 
+     `git clone https://github.com/contiki-os/contiki`
+  6. Follow from step viii in the Instant Contiki setup guide.
 
 <br><br>
 <b>Note from Omar:</b>

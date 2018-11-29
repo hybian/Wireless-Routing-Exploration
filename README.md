@@ -63,6 +63,7 @@ There are two methods of getting started with Contiki:
       - A Java runtime environment: `sudo apt-get install openjdk-8-jdk openjdk-8-jre ant libncurses5-dev`
       - Contiki OS is a 32-bit environment so in case you're running a 64-bit Linux OS (which Instant Contiki is as of 
         this writing): `sudo apt-get install lib32ncurses5`.
+      - Python2.7 (Ubuntu 18.04 comes with Python3 default): `sudo apt-get install python`
   5. Clone the Contiki OS source code:
      - While in your folder of choice (this guide clones from home folder), run: 
      `git clone https://github.com/contiki-os/contiki`

@@ -7,7 +7,7 @@ The [getting started](http://www.contiki-os.org/start.html) page of Contiki-NG i
 resources for setting up so this section strives to be a getting started guide that doesn't make assumptions.
 
 There are two methods of getting started with Contiki:
-- Instant Contiki
+- Instant Contiki **(Recommended)**
   1. You will need VM client. Virtual Box or VMWare works. I opted for using VMware Workstation 15 since I've had issues 
   with hardware devices communicating with Virtual Box in the past.
   2. Download Instant Contiki from it's [hosting page](https://sourceforge.net/projects/contiki/files/Instant%20Contiki/).
@@ -35,7 +35,7 @@ There are two methods of getting started with Contiki:
           Tentative link-local IPv6 address fe80:0000:0000:0000:0302:0304:0506:0708
           Hello, world
       4. Ctrl+C to quit.
-  9. <b>Compiling and running for \<platform\></b> (we're using a Tmote Sky):
+  9. **Compiling and running for \<platform\>** (we're using a Tmote Sky):
       1. Make sure your device is connected to the virtual machine or the following steps may fail (i.e. try running 
       `lsusb` to check if your device is connected)
       2. `sudo make TARGET=<platform> savetarget` (saves target compilation for future to save time. Optional. Replace
@@ -50,7 +50,7 @@ There are two methods of getting started with Contiki:
             Starting 'Hello world process'
             Hello, world
       5. Ctrl+C to quit.
-- Manual Contiki (Recommended)
+- Manual Contiki
   1. Download Ubuntu (This guide uses Ubuntu Desktop 18.04.1)
   2. Install onto a VM client (This guide uses VMware Workstation)
   3. Power on VM and open terminal.
@@ -70,9 +70,9 @@ There are two methods of getting started with Contiki:
   6. Follow from step viii in the Instant Contiki setup guide.
 
 <br><br>
-<b>Note from Omar:</b>
+**Note from Omar:**
 >  I've tried Instant Contiki and does a good job of being a quick way to get started, but the reason this method isn't 
 my first choice is because it doesn't work out of the box even when following Contiki-NG's own getting started
 instructions -- which doesn't quite make this method as instant as you'd like it to be. While I was able to resolve the
 issues that made it not work for my purposes, I was concerned about running into issues later so I opted for building
-Contiki manually so I know exactly what went into the set-up process.
+Contiki manually so I know exactly what went into the set-up process. <br>**Update:** No longer recommending Manual Contiki. For some reason perhaps related to using Ubuntu 18.04, how msp430-gcc is configured, or something else, some example programs in contiki end up using all of the ROM space on the Tmote Sky platform. On Instant Contiki this doesn't happen and the programs we've tried can be successfully compiled and programmed onto the sky platform.

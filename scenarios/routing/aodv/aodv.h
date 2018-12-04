@@ -17,7 +17,7 @@
 
 #define MAX_NEIGHBORS 5
 
-#define DEBUG 0
+#define DEBUG 1
 
 #define MAX_BUFFER_SIZE 10
 

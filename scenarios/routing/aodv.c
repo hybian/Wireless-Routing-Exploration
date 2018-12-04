@@ -5,6 +5,7 @@
 #include "contiki.h"
 #include "aodv.h"
 #include "dev/leds.h"
+#include "net/ipv6/udp-socket.h"
 
 #include <stdio.h>
 
@@ -13,6 +14,8 @@
 #define RREQ_CHANNEL 15 // Broadcast
 #define RREP_CHANNEL 20 // Unicast
 #define DATA_CHANNEL 25 // Unicast
+
+#define MAX_NEIGHBORS 5
 
 #define DEBUG 0
 
@@ -23,9 +26,18 @@ PROCESS(rreq_process, "RREQ packet handler");        //   from routing process
 
 AUTOSTART_PROCESSES(&boot_process, &data_process, &rreq_process);
 
+// PROTOTYPE FUNCTIONS
+
+// GLOBAL VARIABLES
+static struct routing_table_entry routing_tbl_entry[MAX_NEIGHBORS];
+
 PROCESS_THREAD(boot_process, ev, data)
 {
+
+
     PROCESS_BEGIN();
+
+    // TODO: Prepare routing tables
 
     PROCESS_END();
 }

@@ -1,7 +1,7 @@
-CONTIKI_PROJECT = myrouting
+CONTIKI_PROJECT = aodv
 all: $(CONTIKI_PROJECT)
 
-PROJECT_SOURCEFILES += myrouting
+PROJECT_SOURCEFILES += aodv
 
 CONTIKI = /home/aceosnnall/Documents/contiki-ng
 include $(CONTIKI)/Makefile.include

@@ -1,8 +1,72 @@
 #ifndef AODV_H
 #define AODV_H
 
+#include "contiki.h"
+#include "contiki-lib.h"
+#include "contiki-net.h"
+
+// DEFINES
+//   These channels are more likely to have less interference for 802.15.4 networks
+#define RREQ_CHANNEL 15 // Broadcast
+#define RREP_CHANNEL 20 // Unicast
+#define DATA_CHANNEL 25 // Unicast
+
+#define RREQ_PORT 61618
+#define RREP_PORT 61619
+#define DATA_PORT 61620
+
+#define MAX_NEIGHBORS 5
+
+#define DEBUG 0
+
 #define MAX_BUFFER_SIZE 10
 
+// PROTOTYPE FUNCTIONS
+void reset_routing_tables();
+
+// GLOBAL VARIABLES
+//   Sockets
+static struct udp_socket rreq_conn;
+static struct udp_socket rrep_conn;
+static struct udp_socket data_conn;
+
+//   Socket Callback Funcs
+static void rreq_cb(
+    struct udp_socket *c,
+    void *ptr,
+    const uip_ipaddr_t *source_addr,
+    uint16_t source_port,
+    const uip_ipaddr_t *dest_addr,
+    uint16_t dest_port,
+    const uint8_t *data,
+    uint16_t datalen
+);
+
+//   Socket Callback Funcs
+static void data_cb(
+    struct udp_socket *c,
+    void *ptr,
+    const uip_ipaddr_t *source_addr,
+    uint16_t source_port,
+    const uip_ipaddr_t *dest_addr,
+    uint16_t dest_port,
+    const uint8_t *data,
+    uint16_t datalen
+);
+
+//   Socket Callback Funcs
+static void rrep_cb(
+    struct udp_socket *c,
+    void *ptr,
+    const uip_ipaddr_t *source_addr,
+    uint16_t source_port,
+    const uip_ipaddr_t *dest_addr,
+    uint16_t dest_port,
+    const uint8_t *data,
+    uint16_t datalen
+);
+
+// Packet Formating
 struct data_pkt
 {
     int humidity;

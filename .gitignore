@@ -124,3 +124,8 @@ fabric.properties
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Contiki
+*.ihex
+*.sky
+build/

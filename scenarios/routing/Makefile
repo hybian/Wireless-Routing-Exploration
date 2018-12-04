@@ -1,7 +1,7 @@
 CONTIKI_PROJECT = aodv
 all: $(CONTIKI_PROJECT)
 
-PROJECT_SOURCEFILES += aodv
+TARGET_LIBFILES += -lm
 
-CONTIKI = /home/aceosnnall/Documents/contiki-ng
+CONTIKI = ../../..
 include $(CONTIKI)/Makefile.include

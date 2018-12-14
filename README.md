@@ -7,7 +7,7 @@ The [getting started](http://www.contiki-os.org/start.html) page of Contiki-NG i
 resources for setting up so this section strives to be a getting started guide that doesn't make assumptions.
 
 There are two methods of getting started with Contiki:
-- Instant Contiki **(Recommended)**
+- Instant Contiki
   1. You will need VM client. Virtual Box or VMWare works. I opted for using VMware Workstation 15 since I've had issues 
   with hardware devices communicating with Virtual Box in the past.
   2. Download Instant Contiki from it's [hosting page](https://sourceforge.net/projects/contiki/files/Instant%20Contiki/).
@@ -50,7 +50,7 @@ There are two methods of getting started with Contiki:
             Starting 'Hello world process'
             Hello, world
       5. Ctrl+C to quit.
-- Manual Contiki
+- Manual Contiki **Recommended**
   1. Download Ubuntu (This guide uses Ubuntu Desktop 18.04.1)
   2. Install onto a VM client (This guide uses VMware Workstation)
   3. Power on VM and open terminal.
@@ -64,9 +64,9 @@ There are two methods of getting started with Contiki:
       - Contiki OS is a 32-bit environment so in case you're running a 64-bit Linux OS (which Instant Contiki is as of 
         this writing): `sudo apt-get install lib32ncurses5`.
       - Python2.7 (Ubuntu 18.04 comes with Python3 default): `sudo apt-get install python`
-  5. Clone the Contiki OS source code:
+  5. Clone the Contiki-NG source code:
      - While in your folder of choice (this guide clones from home folder), run: 
-     `git clone https://github.com/contiki-os/contiki`
+     `git clone https://github.com/contiki-ng/contiki-ng`
   6. Follow from step viii in the Instant Contiki setup guide.
 
 <br><br>

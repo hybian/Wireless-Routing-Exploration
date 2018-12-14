@@ -6,7 +6,7 @@ By: Hongyi Bian and Omar Taylor
 The [getting started](http://www.contiki-os.org/start.html) page of Contiki-NG is incomplete nor are other online
 resources for setting up so this section strives to be a getting started guide that doesn't make assumptions.
 
-There are two methods of getting started with Contiki:
+There are two methods of getting started with Contiki (Please use the manual method):
 - Instant Contiki
   1. You will need VM client. Virtual Box or VMWare works. I opted for using VMware Workstation 15 since I've had issues 
   with hardware devices communicating with Virtual Box in the past.
@@ -66,8 +66,9 @@ There are two methods of getting started with Contiki:
       - Python2.7 (Ubuntu 18.04 comes with Python3 default): `sudo apt-get install python`
   5. Clone the Contiki-NG source code:
      - While in your folder of choice (this guide clones from home folder), run: 
-     `git clone https://github.com/contiki-ng/contiki-ng`
+     `git clone https://github.com/Acesonnall/contiki-ng.git`
   6. Follow from step viii in the Instant Contiki setup guide.
+  7. From the top-level folder, run `git submodule update --init` to acquire our scenarios.
 
 <br><br>
 **Note from Omar:**
